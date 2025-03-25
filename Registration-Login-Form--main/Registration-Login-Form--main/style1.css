@@ -1,0 +1,195 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #87CEEB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #005f87;
+}
+
+.navbar input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    width: 250px;
+    transition: width 0.3s;
+}
+
+.navbar input:focus {
+    width: 300px;
+}
+
+/* Image Slider */
+.slider {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slider img {
+    width: 80%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Books Gallery */
+.photos {
+    padding: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 20px;
+}
+
+/* Each book box */
+.img-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.img-box img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.buy-now, .view-pdf {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.buy-now {
+    background-color: #28a745;
+}
+
+.view-pdf {
+    background-color: #007bff;
+}
+
+.buy-now:hover {
+    background-color: #218838;
+}
+
+.view-pdf:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* Single image per row on mobile */
+    }
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
